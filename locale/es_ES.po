@@ -1,0 +1,55 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:activity.activity,rating:"
+msgid "Rating"
+msgstr "Valoración"
+
+msgctxt "field:activity.rating,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:activity.rating,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:activity.rating,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:activity.rating,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:activity.rating,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:activity.rating,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:activity.rating,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "model:activity.rating,name:"
+msgid "Activity Rating"
+msgstr "Valoración actividades"
+
+msgctxt "model:ir.action,name:act_activity_rating"
+msgid "Ratings"
+msgstr "Valoraciones"
+
+msgctxt "model:ir.ui.menu,name:menu_activity_rating"
+msgid "Ratings"
+msgstr "Valoraciones"
+
+msgctxt "view:activity.rating:"
+msgid "Activity Rating"
+msgstr "Valoración actividades"
+
+msgctxt "view:activity.rating:"
+msgid "Rating"
+msgstr "Valoración"

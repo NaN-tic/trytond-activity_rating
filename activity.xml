@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="activity_activity_form_view">
+            <field name="model">activity.activity</field>
+            <field name="inherit" ref="activity.activity_activity_form_view"/>
+            <field name="name">activity_form</field>
+        </record>
+        <record model="ir.ui.view" id="activity_rating_form_view">
+            <field name="model">activity.rating</field>
+            <field name="type">form</field>
+            <field name="name">activity_rating_form</field>
+        </record>
+        <record model="ir.ui.view" id="activity_rating_tree_view">
+            <field name="model">activity.rating</field>
+            <field name="type">tree</field>
+            <field name="name">activity_rating_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_activity_rating">
+            <field name="name">Ratings</field>
+            <field name="res_model">activity.rating</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_activity_rating_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="activity_rating_tree_view"/>
+            <field name="act_window" ref="act_activity_rating"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_activity_rating_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="activity_rating_form_view"/>
+            <field name="act_window" ref="act_activity_rating"/>
+        </record>
+        <record model="ir.model.access" id="access_activity_rating">
+            <field name="model" search="[('model', '=', 'activity.rating')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_activity_rating_admin">
+            <field name="model" search="[('model', '=', 'activity.rating')]"/>
+            <field name="group" ref="activity.group_activity_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <menuitem action="act_activity_rating" id="menu_activity_rating"
+            parent="activity.menu_configuration" sequence="1"/>
+    </data>
+</tryton>
+
