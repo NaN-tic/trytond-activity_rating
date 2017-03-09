@@ -4,7 +4,6 @@ from trytond.model import ModelSQL, ModelView, fields
 from trytond.pool import PoolMeta
 
 __all__ = ['Rating', 'Activity']
-__metaclass__ = PoolMeta
 
 
 class Rating(ModelSQL, ModelView):
@@ -16,5 +15,6 @@ class Rating(ModelSQL, ModelView):
 
 class Activity:
     __name__ = 'activity.activity'
+    __metaclass__ = PoolMeta
 
     rating = fields.Many2One('activity.rating', 'Rating')
